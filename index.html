@@ -1,0 +1,168 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+   <link rel="stylesheet" href="./Untitled-1.css">
+  
+</head>
+<body>
+
+  <section class="box">
+    <div class="text">
+       <h1>Stay updated!</h1>
+       <p class="first">Join 60,000+ products managers recieving monthly updates on:</p>
+
+       <div class="check 1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><g fill="none"><circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155"/><path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8"/></g></svg>
+       <p>Product discovery and building what matters</p>
+
+       </div>
+       <div class="check 2">
+        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><g fill="none"><circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155"/><path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8"/></g></svg>
+        <p>Measuring to ensure updates are a success</p>
+
+       </div>
+       <div class="check 3">
+
+        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><g fill="none"><circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155"/><path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8"/></g></svg>
+        <p>Add much more!</p>
+       </div>
+
+       <div class="checking">
+
+        <form action="#">
+
+       <label>E-mail adress</label>
+       <span class="span"></span>
+       <input id="white" type="email" placeholder="email@company.com" value="" onkeydown="validation()">
+       <button onclick="hello()" class="click">Subscribe to monthly newsteller</button>
+
+      </form>
+
+      </div>
+    </div>
+
+
+    <div class="aside">
+
+    </div>
+  </section>
+
+  <section class="two">
+    
+    <div class="user">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21"><g fill="none"><circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155"/><path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8"/></g></svg>
+      <h1>Thanks for subscribing</h1>
+      <p id="cool">A confirmation email has been sent to. Please open it and click the button inside to confirmyour subscription</p>
+
+      <button onclick="happy()" class="yes">Dismiss message</button>
+    </div>
+
+
+
+  </section>
+
+  <script>
+
+   function validation(){
+
+    var pattern= /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    var email= document.querySelector("input").value;
+    var text= document.querySelector("span");
+    var form= document.querySelector("form");
+
+
+    
+    if(email.match(pattern)){
+       form.classList.add("valid");
+       form.classList.remove("invalid");
+       text.innerHTML="valid";
+       text.style.color="green";  
+
+    }
+    else{
+       form.classList.remove("valid");
+       form.classList.add("invalid");
+       text.innerHTML="please enter a valid form"
+       text.style.color="red"
+
+
+
+    }
+
+    if (email==""){
+       form.classList.remove("valid");
+       form.classList.remove("invalid");
+       text.innerHTML="";
+       text.style.color="";
+
+
+    }
+  }
+
+
+  
+function hello(){
+
+  var pattern= /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    var email= document.querySelector("input").value;
+    var text= document.querySelector("span");
+    var form= document.querySelector("form");
+
+
+    if(email.match(pattern)){
+
+      document.querySelector(".box").style.display="none";
+        document.querySelector(".two").style.display="flex";
+        const x = document.querySelector("input").value;
+
+        document.querySelector(".two p").innerHTML= "A confirmation email has been sent to "+x+" .Please open it and click the button inside to confirmyour subscription";
+  }
+    
+
+    else{
+      return hello();
+    }
+
+    if (email==""){
+      return hello();
+    }
+  }
+
+  function happy(){
+    document.querySelector(".box").style.display="flex";
+    document.querySelector(".two").style.display="none";
+  }
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+   
+
+   
+
+
+
+
+
+
+  </script>
+
+</body>
+</html>

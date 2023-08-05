@@ -1,0 +1,185 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+body{
+    background-color:  hsl(234, 29%, 20%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    width: 850px;
+    height: 600px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    padding: 15px;
+}
+
+
+.aside{
+    flex-basis: 40%;
+    height: 100%;
+    background-image: url(./assets/images/illustration-sign-up-desktop.svg);
+    background-position: right;
+    background-size: cover;
+}
+
+.text{
+    flex-basis: 60%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    padding: 40px;
+}
+
+
+.text h1{
+    font-size: 50px;
+    color: hsl(234, 29%, 20%);
+    text-align: 1px;
+    margin-bottom: 15px;
+}
+
+.text p{
+    font-weight: lighter;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: hsl(235, 18%, 26%);
+}
+
+.first{
+    margin-bottom: 30px;
+}
+
+.check{
+    display: flex;
+    margin-top: 30px;
+}
+
+.check svg{
+   font-size: 30px;
+   margin-right: 13px;
+}
+
+.check p{
+    font-size: 19px;
+    letter-spacing: 0;
+}
+
+
+.checking {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    position: relative;
+}
+
+.checking input{
+    padding: 13px;
+    border: 2px solid hsl(231, 7%, 60%);
+    border-radius: 9px;
+    outline: none;
+    margin-top: 10px;
+}
+
+.click{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    width: 100%;
+    margin-top: 10px;
+    background-color: hsl(234, 29%, 20%);
+    border: none;
+    border-radius: 9px;
+    color: white;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+span{
+    position: absolute;
+    right: 0;
+    color: #ff6257;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+.two{
+    display: none;
+    height: auto;
+    width: 400px;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+
+
+
+.yes{
+    padding: 15px;
+    width: 100%;
+    border: none;
+    color: white;
+    margin: 15px 0px 10px 0px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .5s;
+    background-color: hsl(234, 29%, 20%);
+}
+
+.yes:hover{
+    background-color: Tomato;
+}
+
+.user h1{
+    font-size: 50px;
+    color: hsl(234, 29%, 20%);
+    margin: 10px 0px 10px 0px;
+}
+
+.user p{
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.user svg{
+    width: 60px;
+    height: 60px;
+}
+
+@media screen and (max-width:900px){
+
+    body{
+        height: auto;
+    }
+    .box{
+        display: flex;
+        flex-direction: column-reverse;
+        height: auto;
+        padding: 0;
+    }
+
+
+    .aside{
+        background-image: url(./assets/images/illustration-sign-up-mobile.svg);
+        height: 300px;
+        flex-basis: auto;
+        border-radius: 0px 0px 20px 20px;
+    }
+    .two{
+        height: 100%;
+        border-radius: 0px;
+    }
+}
